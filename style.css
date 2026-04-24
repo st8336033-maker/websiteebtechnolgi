@@ -2,10 +2,40 @@
 @layer reset, base, layout, components, sections, utilities;
 
 @layer reset {
-    /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}details,main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+    /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+    button,hr,input{overflow:visible}
+    progress,sub,sup{vertical-align:baseline}
+    [type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}
+    html{line-height:1.15;-webkit-text-size-adjust:100%; text-size-adjust:100%}
+    body{margin:0}
+    details,main{display:block}
+    h1{font-size:2em;margin:.67em 0}
+    hr{box-sizing:content-box;height:0}
+    code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
+    a{background-color:transparent}
+    abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+    b,strong{font-weight:bolder}
+    small{font-size:80%}
+    sub,sup{font-size:75%;line-height:0;position:relative}
+    sub{bottom:-.25em}
+    sup{top:-.5em}
+    img{border-style:none}
+    button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}
+    button,select{text-transform:none}
+    [type=button],[type=reset],[type=submit],button{-webkit-appearance:button; appearance:button}
+    [type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}
+    [type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}
+    fieldset{padding:.35em .75em .625em}
+    legend{color:inherit;display:table;max-width:100%;white-space:normal}
+    textarea{overflow:auto}
+    [type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+    [type=search]{-webkit-appearance:textfield; appearance:textfield; outline-offset:-2px}
+    [type=search]::-webkit-search-decoration{-webkit-appearance:none; appearance:none}
+    ::-webkit-file-upload-button{-webkit-appearance:button; appearance:button; font:inherit}
+    summary{display:list-item}
+    [hidden],template{display:none}
 
     /* Custom resets*/
-
     button {
       padding: 0;
       margin: 0;
@@ -13,7 +43,6 @@
       border: none;
     }
 }
-
 
 /* 2. BASE LAYER */
 @layer base {
@@ -63,36 +92,19 @@
     --radius-full: 100%;
 
     /* --- Effects & Shadows --- */
-    /* Using color-mix to create that rgba(219, 255, 236, 0.16) dynamically */
     --card-bg-glass: color-mix(in srgb, var(--color-primary-20), transparent 84%);
     --shadow-inset-soft: inset 4px 4px 6px rgba(0, 0, 0, 0.25);
     --blur-glass: blur(12.5px);
   }
 
   [data-theme="dark"] {
-    /* We flip the background to a deeper black-green */
     --color-bg-body: #0A0F08; 
-    
-    /* Primary 100 was deep green, we make it even darker or more saturated */
     --color-primary-100: #002411; 
-    
-    /* Primary 20 was very light green; in dark mode, we shift this to a 
-       mid-tone green so the "glass" effect looks like glowing neon */
     --color-primary-20: #143324; 
-    
-    /* Keep the brand accent green visible but punchier */
     --color-primary-70: #5EFB9F; 
-    
-    /* Keep the secondary yellow but perhaps slightly more amber for eye-care */
     --color-secondary-60: #FFCC00;
-
-    /* Text stays white, but we can dim it slightly for sub-text if needed */
     --color-white: #E0E0E0;
-
-    /* Invert the shadow to look like a "glow" or a deeper pit */
     --shadow-inset-soft: inset 2px 2px 8px rgba(0, 0, 0, 0.5);
-    
-    /* The glass effect now pulls from the darker primary-20 */
     --card-bg-glass: color-mix(in srgb, var(--color-primary-20), transparent 60%);
   }
 
@@ -103,7 +115,7 @@
     margin: 0;
   }
 
-  h1, h2, h3, h4, h5, h5 {
+  h1, h2, h3, h4, h5, h6 {
     margin-block: 0;
   }
 
@@ -128,7 +140,7 @@
   }
 }
 
-/* 3. LAYOYUT LAYER */
+/* 3. LAYOUT LAYER */
 @layer layout {
   .container {
     max-width: 1440px;
@@ -139,10 +151,8 @@
 
 /* 3. COMPONENTS LAYER */
 @layer components {
-  /* --- Buttons --- */
   .btn {
     --radius-btn: var(--radius-md);
-
     display: inline-flex;
     align-items: center;
     text-decoration: none;
@@ -153,7 +163,6 @@
 
   .btn--sm { min-width: 70px; min-height: 50px; font-size: var(--font-size-sm); }
   .btn--md { min-width: 90px; min-height: 50px; font-size: var(--font-size-md); }
-  .btn--rounded-md { border-radius: var(--radius-btn); }
   
   .btn--warning {
     background-color: var(--color-secondary-60);
@@ -166,172 +175,44 @@
     color: var(--color-primary-70);
   }
 
-  /* --- Cards --- */
   .card {
-    --card-gap-sm: 16px;
-    --card-gap-lg: 32px;
-
     background: var(--card-bg-glass);
     box-shadow: var(--shadow-inset-soft);
     backdrop-filter: var(--blur-glass);
-    /* We use the base color for fallback or layering */
     color: var(--color-white);
-
-    .card__title {
-      font-size: var(--font-size-5xl);
-      font-weight: var(--font-weight-bold);
-    }
-
-    .card__info {
-      font-size: var(--font-size-2xl);
-    }
-
-    .card__price {
-      font-size: var(--font-size-5xl);
-      font-weight: var(--font-weight-semibold);
-      color: var(--color-primary-20);
-    }
-
-    .card__action {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-  }
-  
-  .card--md { padding: 40px 24px; }
-  .card--lg { padding: 40px 48px; }
-  
-  /* Updated radius classes with variables */
-  .card--rounded-md { border-radius: var(--radius-md); }
-  .card--rounded-lg { border-radius: var(--radius-lg); }
-
-  .card--flex-column {
     display: flex;
     flex-direction: column;
   }
-    
-  .card--gap-sm {
-    gap: var(--card-gap-sm);
+  
+  .card--md { padding: 40px 24px; border-radius: var(--radius-md); }
+  .card--lg { padding: 40px 48px; border-radius: var(--radius-lg); }
+
+  .section-heading {
+    position: relative;
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 14px;
   }
-
-  .card--gap-lg {
-    gap: var(--card-gap-lg);
+  
+  .section-heading::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    padding: 2px;
+    background: linear-gradient(
+      to right,
+      rgba(214, 178, 0, 1) 0%,
+      rgba(178, 245, 209, 0) 30%,
+      rgba(170, 198, 184, 0) 70%,
+      rgba(214, 178, 0, 1) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
   }
-
-  .card__text { 
-    font-size: var(--font-size-base); 
-    font-weight: var(--font-weight-regular);
-    margin-block: 0;
-  }
-
-  /* --- Avatar --- */
-  .avatar {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .avatar__image {
-    width: 72px;
-    height: 72px;
-    border-radius: var(--radius-50);
-    object-fit: cover;
-  }
-
-  .avatar__info {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .avatar__title {
-    font-size: var(--font-size-4xl);
-    font-weight: var(--font-weight-bold);
-    margin: 0;
-  }
-
-  .avatar__rating svg:hover path {
-    fill: var(--color-secondary-60);
-  }
-
-  /* --- Logo --- */
-
-  .logo img {
-    display: block;
-  }
-
-  /* --- Navigation --- */
-
-  .main-nav ul {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 48px;
-  }
-
-  .main-nav a {
-    color: var(--color-primary-20);
-    font-size: var(--font-size-3xl);
-    font-weight: var(--font-weight-semibold);
-    text-decoration: none;
-  }
-
-    /* --- Header components --- */
-    .main-header__actions {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .main-header__actions button {
-      cursor: pointer;
-    }
-
-    .main-header__actions svg {
-      display: block;
-    }
-
-  /* --- Typography --- */
-    .section-heading {
-      display: inline-flex;
-      position: relative;
-      padding: 16px 24px;
-      text-align: center;
-    }
-
-    /* The Gradient Border */
-    .section-heading {
-      position: relative;
-      display: inline-block;
-      padding: 14px 32px;
-      border-radius: 14px;
-    }
-    
-    .section-heading::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 14px;
-      padding: 2px; /* border thickness */
-    
-      background: linear-gradient(
-        to right,
-        rgba(214, 178,   0, 1) 0%,   /* gold — full opacity */
-        rgba(178, 245, 209, 0) 30%,  /* transparent */
-        rgba(170, 198, 184, 0) 70%,  /* transparent */
-        rgba(214, 178,   0, 1) 100%  /* gold — full opacity */
-      );
-    
-      -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-      -webkit-mask-composite: destination-out;
-      mask-composite: exclude;
-    }
- }
+}
 
 /* 4. LAYOUT LAYER */
 @layer sections {
@@ -342,37 +223,11 @@
     gap: 40px;
   }
 
-  .main-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-block: 24px;
-  }
-
   .hero {
     min-height: 100vh;
-    background: url('../images/sections/hero/hero-bg.jpg') no-repeat center/cover;
+    /* Виправлено шлях до картинки відповідно до твоїх папок */
+    background: url('images/hero-bg.jpg') no-repeat center/cover;
     display: grid;
     place-items: center;
-  }
-
-  .top-selling {
-    padding-block: 40px;
-
-    .top-selling__items {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-  }
-
-  .reviews {
-    padding-block: 20px;
-
-    .reviews__items {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
   }
 }
