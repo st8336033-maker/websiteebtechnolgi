@@ -1,110 +1,147 @@
-:root { 
-    --main: #cdef2e; 
-    --bg: #f8f8f8; 
-    --dark: #111; 
-    --sale: #ff4747; 
+/* Основні налаштування */
+:root {
+    --bg-color: #1a1e1a;
+    --card-bg: #242924;
+    --accent-green: #a4c639;
+    --text-main: #ffffff;
+    --text-dim: #b0b0b0;
 }
 
-body { 
-    font-family: 'Inter', sans-serif; 
-    margin: 0; 
-    background: var(--bg); 
-    color: var(--dark); 
-    overflow-x: hidden; 
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
 }
 
-/* Шапка */
-header { 
-    background: #000; 
-    color: #fff; 
-    padding: 12px 5%; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    position: sticky; 
-    top:0; 
-    z-index: 1000; 
+/* Навігація */
+header {
+    padding: 20px 5%;
 }
 
-.header-right { 
-    display: flex; 
-    align-items: center; 
-    gap: 18px; 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Мови */
-.lang-box { position: relative; cursor: pointer; font-size: 13px; color: var(--main); font-weight: 800; }
-.lang-dropdown { 
-    display: none; position: absolute; top: 25px; right: 0; 
-    background: #fff; color: #000; border-radius: 8px; width: 120px; z-index: 2000; 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
 }
-.lang-dropdown div { padding: 10px; border-bottom: 1px solid #eee; cursor: pointer; }
-.lang-dropdown div:hover { background: #f9f9f9; }
 
-/* Іконки */
-.icon-btn { font-size: 20px; color: #fff; cursor: pointer; position: relative; transition: 0.2s; }
-.icon-btn:hover { color: var(--main); }
-
-/* Бокова панель */
-.sidebar { 
-    position: fixed; left: -280px; top: 0; width: 280px; height: 100%; 
-    background: #ffffff; z-index: 3000; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
-    box-sizing: border-box; display: flex; flex-direction: column; border-right: 1px solid #eee; 
+nav ul li a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 14px;
 }
-.sidebar.open { left: 0; box-shadow: 15px 0 40px rgba(0,0,0,0.08); }
 
-.sidebar-header { padding: 25px 20px; background: #fcfcfc; border-bottom: 1px solid #f0f0f0; }
-.menu-item { display: flex; align-items: center; padding: 14px 20px; color: #555; text-decoration: none; cursor: pointer; transition: 0.2s; font-size: 15px; gap: 15px; }
-.menu-item:hover { background: #f5f5f5; color: #000; }
-.menu-item i { width: 20px; text-align: center; font-size: 18px; color: #888; }
-.menu-item.active { color: #000; font-weight: 700; background: rgba(205, 239, 46, 0.1); border-left: 4px solid var(--main); }
+/* Секція Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    min-height: 80vh;
+}
 
-#sub-menu { background: #fafafa; }
-.sub-item { padding: 10px 20px 10px 55px; color: #777; font-size: 14px; cursor: pointer; transition: 0.2s; }
-.sub-item:hover { color: var(--dark); background: #f0f0f0; }
-.sidebar-footer { margin-top: auto; padding: 20px; border-top: 1px solid #f0f0f0; }
+.hero-text {
+    flex: 1;
+}
 
-.overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 2500; }
+.hero-text h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
 
-/* Категорії */
-.top-nav-cats { background: #fff; display: flex; gap: 10px; padding: 10px 5%; overflow-x: auto; border-bottom: 1px solid #ddd; position: sticky; top: 54px; z-index: 900; }
-.chip { padding: 8px 18px; background: #eee; border-radius: 20px; font-size: 13px; white-space: nowrap; cursor: pointer; border: none; transition: 0.2s; }
-.chip.active { background: var(--main); font-weight: bold; }
+.hero-text p {
+    color: var(--text-dim);
+    max-width: 450px;
+    margin-bottom: 30px;
+}
 
-/* Товари */
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; padding: 20px 5%; }
-.card { background: #fff; border-radius: 18px; overflow: hidden; position: relative; box-shadow: 0 6px 15px rgba(0,0,0,0.06); cursor: pointer; transition: 0.2s; }
-.card:hover { transform: translateY(-5px); }
-.card img { width: 100%; height: 220px; object-fit: cover; background: #eee; }
-.fav-btn { position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ccc; transition: 0.2s; }
-.fav-btn.active { color: var(--sale); }
+.btn-primary {
+    background: var(--accent-green);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 15px;
+}
 
-/* Модалки */
-.modal { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.85); z-index: 4000; justify-content: center; align-items: center; }
-.modal-content { background: #fff; width: 95%; max-width: 500px; border-radius: 25px; padding: 25px; box-sizing: border-box; max-height: 90vh; overflow-y: auto; }
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--text-dim);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-.slider-container { position: relative; width: 100%; height: 350px; border-radius: 15px; overflow: hidden; background: #f0f0f0; display: flex; align-items: center; }
-.slider-container img { width: 100%; height: 100%; object-fit: contain; }
-.nav-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 5; display: none; }
-.nav-arrow.visible { display: block; }
-.arrow-left { left: 10px; }
-.arrow-right { right: 10px; }
+.hero-img img {
+    max-width: 100%;
+    border-radius: 30px;
+}
 
-.size-chip { padding: 10px 15px; border: 1px solid #ddd; border-radius: 10px; cursor: pointer; font-weight: bold; background: #fff; transition: 0.2s; min-width: 45px; text-align: center; }
-.size-chip.active { background: var(--main); border-color: var(--main); color: #000; }
+/* Картки товарів */
+.products {
+    padding: 50px 10%;
+}
 
-.action-btn { background: var(--main); border: none; padding: 16px; border-radius: 14px; font-weight: bold; width: 100%; cursor: pointer; margin-top: 15px; font-size: 16px; transition: 0.2s; }
-.action-btn:hover { opacity: 0.9; }
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
 
-.auth-input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px; margin-bottom: 10px; box-sizing: border-box; }
+.plants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
 
-/* Гра */
-#game-canvas { width: 100%; height: 400px; background: #000; border-radius: 15px; position: relative; overflow: hidden; }
-.game-item { position: absolute; font-size: 35px; cursor: pointer; user-select: none; }
+.plant-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    transition: transform 0.3s;
+}
 
-/* Футер */
-.info-footer { background: #1a1a1a; color: #fff; padding: 40px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 40px; }
-.info-footer h4 { color: var(--main); margin-bottom: 15px; font-size: 14px; }
-.info-footer a { color: #ccc; text-decoration: none; display: block; margin-bottom: 10px; font-size: 14px; cursor: pointer; }
-.info-footer a:hover { color: #fff; }
+.plant-card:hover {
+    transform: translateY(-10px);
+}
+
+.plant-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.plant-card h3 {
+    margin: 10px 0;
+}
+
+.plant-card p {
+    font-size: 13px;
+    color: var(--text-dim);
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.buy-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--text-dim);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
