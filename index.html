@@ -1,62 +1,301 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Breath Natureal - Plant Shop</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <title>Plant website landing</title>
 </head>
 <body>
-
-    <header>
-        <nav>
-            <div class="logo">🌿 Planta.</div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Plant Type's</a></li>
-                <li><a href="#">More</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-            <div class="nav-icons">🔍 👜 👤</div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-text">
-                <h1>Breath Natureal</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="hero-btns">
-                    <button class="btn-primary">Explore</button>
-                    <button class="btn-secondary">Live Demo...</button>
-                </div>
+  <header class="main-header container mt-10">
+    <a href="/" class="logo main-header__logo"><img src="./assets/images/logos/main-logo.svg" alt="Main logo"></a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Plant Type’s</a></li>
+        <li><a href="#">More</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="main-header__actions"> 
+      <button>
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 40C31.9411 40 40 31.9411 40 22C40 12.0589 31.9411 4 22 4C12.0589 4 4 12.0589 4 22C4 31.9411 12.0589 40 22 40Z" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M37.8598 41.3796C38.9198 44.5796 41.3398 44.8996 43.1998 42.0996C44.8998 39.5396 43.7798 37.4396 40.6998 37.4396C38.4198 37.4196 37.1398 39.1996 37.8598 41.3796Z" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button>
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.8 13H31.2001C38.0001 13 38.6801 16.18 39.1401 20.06L40.9401 35.06C41.5201 39.98 40.0001 44 33.0001 44H15.0201C8.00005 44 6.48005 39.98 7.08005 35.06L8.88007 20.06C9.32007 16.18 10 13 16.8 13Z" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 16V9C16 6 18 4 21 4H27C30 4 32 6 32 9V16" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M40.82 34.06H16" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>   
+      </button>
+      <button>
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24.2399 25.56C24.0999 25.54 23.9199 25.54 23.7599 25.56C20.2399 25.44 17.4399 22.56 17.4399 19.02C17.4399 15.4 20.3599 12.46 23.9999 12.46C27.6199 12.46 30.5599 15.4 30.5599 19.02C30.5399 22.56 27.7599 25.44 24.2399 25.56Z" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M37.48 38.76C33.92 42.02 29.2 44 24 44C18.8 44 14.08 42.02 10.52 38.76C10.72 36.88 11.92 35.04 14.06 33.6C19.54 29.96 28.5 29.96 33.94 33.6C36.08 35.04 37.28 36.88 37.48 38.76Z" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>  
+      </button>          
+    </div>
+  </header>
+  <main>
+<!--     <section class="hero">
+      <div class="container">
+        <div class="col">
+          <div class="hero__content">
+            <h1>
+              Breath Natureal
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="hero__content-actions">
+              <a href="#" class="btn btn--sm btn--outline">Explore</a>
+              <a href="#" class="btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <path d="M23.94 44C34.9857 44 43.94 35.0457 43.94 24C43.94 12.9543 34.9857 4 23.94 4C12.8943 4 3.94 12.9543 3.94 24C3.94 35.0457 12.8943 44 23.94 44Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M17.48 24.46V21.12C17.48 16.96 20.42 15.26 24.02 17.34L26.92 19.02L29.82 20.7C33.42 22.78 33.42 26.18 29.82 28.26L26.92 29.94L24.02 31.62C20.42 33.7 17.48 32 17.48 27.84V24.46Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Live Demo...
+              </a>
             </div>
-            <div class="hero-img">
-                <img src="https://via.placeholder.com/400x500/2d352d/ffffff?text=Main+Plant" alt="Головна рослина">
-            </div>
-        </section>
-
-        <section class="products">
-            <h2 class="section-title">Our Trendy plants</h2>
-            <div class="plants-grid">
-                <div class="plant-card">
-                    <img src="https://via.placeholder.com/150" alt="Plant">
-                    <h3>Calathea plant</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div class="price">$ 40</div>
-                    <button class="buy-btn">Buy Now</button>
+          </div>
+          <div class="card card--md card--rounded-md review-card">
+            <div class="avatar">
+              <img src="https://media.istockphoto.com/id/1919265357/photo/close-up-portrait-of-confident-businessman-standing-in-office.jpg?s=612x612&w=0&k=20&c=ZXRPTG9VMfYM3XDo1UL9DEpfO8iuGVSsyh8dptfKQsQ=" class="avatar__image" alt="Avatar photo">
+              <div class="avatar__info">
+                <div class="avatar__title">Alena Patel</div>
+                <div class="avatar__rating">                   
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.15333 2.33977L10.3267 4.68643C10.4867 5.0131 10.9133 5.32643 11.2733 5.38643L13.4 5.73977C14.76 5.96643 15.08 6.9531 14.1 7.92643L12.4467 9.57977C12.1667 9.85977 12.0133 10.3998 12.1 10.7864L12.5733 12.8331C12.9467 14.4531 12.0867 15.0798 10.6533 14.2331L8.66 13.0531C8.3 12.8398 7.70667 12.8398 7.34 13.0531L5.34667 14.2331C3.92 15.0798 3.05333 14.4464 3.42667 12.8331L3.9 10.7864C3.98667 10.3998 3.83333 9.85977 3.55333 9.57977L1.9 7.92643C0.926667 6.9531 1.24 5.96643 2.6 5.73977L4.72667 5.38643C5.08 5.32643 5.50667 5.0131 5.66667 4.68643L6.84 2.33977C7.48 1.06643 8.52 1.06643 9.15333 2.33977Z" fill="#FFFBE6" stroke="#FFFBE6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>    
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.15333 2.33977L10.3267 4.68643C10.4867 5.0131 10.9133 5.32643 11.2733 5.38643L13.4 5.73977C14.76 5.96643 15.08 6.9531 14.1 7.92643L12.4467 9.57977C12.1667 9.85977 12.0133 10.3998 12.1 10.7864L12.5733 12.8331C12.9467 14.4531 12.0867 15.0798 10.6533 14.2331L8.66 13.0531C8.3 12.8398 7.70667 12.8398 7.34 13.0531L5.34667 14.2331C3.92 15.0798 3.05333 14.4464 3.42667 12.8331L3.9 10.7864C3.98667 10.3998 3.83333 9.85977 3.55333 9.57977L1.9 7.92643C0.926667 6.9531 1.24 5.96643 2.6 5.73977L4.72667 5.38643C5.08 5.32643 5.50667 5.0131 5.66667 4.68643L6.84 2.33977C7.48 1.06643 8.52 1.06643 9.15333 2.33977Z" fill="#FFFBE6" stroke="#FFFBE6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg> 
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.15333 2.33977L10.3267 4.68643C10.4867 5.0131 10.9133 5.32643 11.2733 5.38643L13.4 5.73977C14.76 5.96643 15.08 6.9531 14.1 7.92643L12.4467 9.57977C12.1667 9.85977 12.0133 10.3998 12.1 10.7864L12.5733 12.8331C12.9467 14.4531 12.0867 15.0798 10.6533 14.2331L8.66 13.0531C8.3 12.8398 7.70667 12.8398 7.34 13.0531L5.34667 14.2331C3.92 15.0798 3.05333 14.4464 3.42667 12.8331L3.9 10.7864C3.98667 10.3998 3.83333 9.85977 3.55333 9.57977L1.9 7.92643C0.926667 6.9531 1.24 5.96643 2.6 5.73977L4.72667 5.38643C5.08 5.32643 5.50667 5.0131 5.66667 4.68643L6.84 2.33977C7.48 1.06643 8.52 1.06643 9.15333 2.33977Z" fill="#FFFBE6" stroke="#FFFBE6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg> 
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.15333 2.33977L10.3267 4.68643C10.4867 5.0131 10.9133 5.32643 11.2733 5.38643L13.4 5.73977C14.76 5.96643 15.08 6.9531 14.1 7.92643L12.4467 9.57977C12.1667 9.85977 12.0133 10.3998 12.1 10.7864L12.5733 12.8331C12.9467 14.4531 12.0867 15.0798 10.6533 14.2331L8.66 13.0531C8.3 12.8398 7.70667 12.8398 7.34 13.0531L5.34667 14.2331C3.92 15.0798 3.05333 14.4464 3.42667 12.8331L3.9 10.7864C3.98667 10.3998 3.83333 9.85977 3.55333 9.57977L1.9 7.92643C0.926667 6.9531 1.24 5.96643 2.6 5.73977L4.72667 5.38643C5.08 5.32643 5.50667 5.0131 5.66667 4.68643L6.84 2.33977C7.48 1.06643 8.52 1.06643 9.15333 2.33977Z" fill="#FFFBE6" stroke="#FFFBE6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg> 
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.15333 2.33977L10.3267 4.68643C10.4867 5.0131 10.9133 5.32643 11.2733 5.38643L13.4 5.73977C14.76 5.96643 15.08 6.9531 14.1 7.92643L12.4467 9.57977C12.1667 9.85977 12.0133 10.3998 12.1 10.7864L12.5733 12.8331C12.9467 14.4531 12.0867 15.0798 10.6533 14.2331L8.66 13.0531C8.3 12.8398 7.70667 12.8398 7.34 13.0531L5.34667 14.2331C3.92 15.0798 3.05333 14.4464 3.42667 12.8331L3.9 10.7864C3.98667 10.3998 3.83333 9.85977 3.55333 9.57977L1.9 7.92643C0.926667 6.9531 1.24 5.96643 2.6 5.73977L4.72667 5.38643C5.08 5.32643 5.50667 5.0131 5.66667 4.68643L6.84 2.33977C7.48 1.06643 8.52 1.06643 9.15333 2.33977Z" fill="#FFFBE6" stroke="#FFFBE6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                        
                 </div>
-                <div class="plant-card">
-                    <img src="https://via.placeholder.com/150" alt="Plant">
-                    <h3>Calathea plant</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div class="price">$ 40</div>
-                    <button class="buy-btn">Buy Now</button>
-                </div>
+              </div>
             </div>
-        </section>
-    </main>
-
+            <p class="card__par">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...
+            </p>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </section> -->
+  <section class="top-selling container">
+    <h2 class="section-heading">Our Top Selling</h2>
+    <div class="top-selling__items">
+      <div class="card card--rounded-md card--md card--flex-column card--gap-sm">
+        <div class="card__image">
+          <img src="assets/images/flowers/flower.png" alt="Flower">
+<!--           <img src="assets/images/flowers/Plant@2x.png" alt="Flower"> -->
+        </div>
+        <h3 class="card__title">Calathea plant</h3>
+        <div class="card__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+        <div class="card__action">
+          <div class="card__price">$ 40</div>
+          <button class="card__atc">
+            <svg width="48" height="40" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="46" height="38" rx="7" stroke="#DBFFEC" stroke-width="2"/>
+              <path d="M19.2 12.6667H28.8C33.3334 12.6667 33.7867 14.7867 34.0934 17.3734L35.2933 27.3734C35.68 30.6534 34.6667 33.3334 30 33.3334H18.0133C13.3333 33.3334 12.32 30.6534 12.72 27.3734L13.92 17.3734C14.2133 14.7867 14.6667 12.6667 19.2 12.6667Z" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.6667 14.6667V10.0001C18.6667 8.00008 20 6.66675 22 6.66675H26C28 6.66675 29.3333 8.00008 29.3333 10.0001V14.6667" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M35.2133 26.7065H18.6667" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>              
+          </button>
+        </div>
+      </div>
+      <div class="card card--rounded-md card--md card--flex-column card--gap-sm">
+        <div class="card__image">
+          <img src="assets/images/flowers/flower.png" alt="Flower">
+<!--           <img src="assets/images/flowers/Plant@2x.png" alt="Flower"> -->
+        </div>
+        <h3 class="card__title">Calathea plant</h3>
+        <div class="card__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+        <div class="card__action">
+          <div class="card__price">$ 40</div>
+          <button class="card__atc">
+            <svg width="48" height="40" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="46" height="38" rx="7" stroke="#DBFFEC" stroke-width="2"/>
+              <path d="M19.2 12.6667H28.8C33.3334 12.6667 33.7867 14.7867 34.0934 17.3734L35.2933 27.3734C35.68 30.6534 34.6667 33.3334 30 33.3334H18.0133C13.3333 33.3334 12.32 30.6534 12.72 27.3734L13.92 17.3734C14.2133 14.7867 14.6667 12.6667 19.2 12.6667Z" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.6667 14.6667V10.0001C18.6667 8.00008 20 6.66675 22 6.66675H26C28 6.66675 29.3333 8.00008 29.3333 10.0001V14.6667" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M35.2133 26.7065H18.6667" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>              
+          </button>
+        </div>
+      </div>
+      <div class="card card--rounded-md card--md card--flex-column card--gap-sm">
+        <div class="card__image">
+          <img src="assets/images/flowers/flower.png" alt="Flower">
+<!--           <img src="assets/images/flowers/Plant@2x.png" alt="Flower"> -->
+        </div>
+        <h3 class="card__title">Calathea plant</h3>
+        <div class="card__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+        <div class="card__action">
+          <div class="card__price">$ 40</div>
+          <button class="card__atc">
+            <svg width="48" height="40" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="46" height="38" rx="7" stroke="#DBFFEC" stroke-width="2"/>
+              <path d="M19.2 12.6667H28.8C33.3334 12.6667 33.7867 14.7867 34.0934 17.3734L35.2933 27.3734C35.68 30.6534 34.6667 33.3334 30 33.3334H18.0133C13.3333 33.3334 12.32 30.6534 12.72 27.3734L13.92 17.3734C14.2133 14.7867 14.6667 12.6667 19.2 12.6667Z" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.6667 14.6667V10.0001C18.6667 8.00008 20 6.66675 22 6.66675H26C28 6.66675 29.3333 8.00008 29.3333 10.0001V14.6667" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M35.2133 26.7065H18.6667" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>              
+          </button>
+        </div>
+      </div>
+      <div class="card card--rounded-md card--md card--flex-column card--gap-sm">
+        <div class="card__image">
+          <img src="assets/images/flowers/flower.png" alt="Flower">
+<!--           <img src="assets/images/flowers/Plant@2x.png" alt="Flower"> -->
+        </div>
+        <h3 class="card__title">Calathea plant</h3>
+        <div class="card__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+        <div class="card__action">
+          <div class="card__price">$ 40</div>
+          <button class="card__atc">
+            <svg width="48" height="40" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="46" height="38" rx="7" stroke="#DBFFEC" stroke-width="2"/>
+              <path d="M19.2 12.6667H28.8C33.3334 12.6667 33.7867 14.7867 34.0934 17.3734L35.2933 27.3734C35.68 30.6534 34.6667 33.3334 30 33.3334H18.0133C13.3333 33.3334 12.32 30.6534 12.72 27.3734L13.92 17.3734C14.2133 14.7867 14.6667 12.6667 19.2 12.6667Z" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.6667 14.6667V10.0001C18.6667 8.00008 20 6.66675 22 6.66675H26C28 6.66675 29.3333 8.00008 29.3333 10.0001V14.6667" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M35.2133 26.7065H18.6667" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>              
+          </button>
+        </div>
+      </div>
+      <div class="card card--rounded-md card--md card--flex-column card--gap-sm">
+        <div class="card__image">
+          <img src="assets/images/flowers/flower.png" alt="Flower">
+<!--           <img src="assets/images/flowers/Plant@2x.png" alt="Flower"> -->
+        </div>
+        <h3 class="card__title">Calathea plant</h3>
+        <div class="card__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+        <div class="card__action">
+          <div class="card__price">$ 40</div>
+          <button class="card__atc">
+            <svg width="48" height="40" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="46" height="38" rx="7" stroke="#DBFFEC" stroke-width="2"/>
+              <path d="M19.2 12.6667H28.8C33.3334 12.6667 33.7867 14.7867 34.0934 17.3734L35.2933 27.3734C35.68 30.6534 34.6667 33.3334 30 33.3334H18.0133C13.3333 33.3334 12.32 30.6534 12.72 27.3734L13.92 17.3734C14.2133 14.7867 14.6667 12.6667 19.2 12.6667Z" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.6667 14.6667V10.0001C18.6667 8.00008 20 6.66675 22 6.66675H26C28 6.66675 29.3333 8.00008 29.3333 10.0001V14.6667" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M35.2133 26.7065H18.6667" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>              
+          </button>
+        </div>
+      </div>
+      <div class="card card--rounded-md card--md card--flex-column card--gap-sm">
+        <div class="card__image">
+          <img src="assets/images/flowers/flower.png" alt="Flower">
+<!--           <img src="assets/images/flowers/Plant@2x.png" alt="Flower"> -->
+        </div>
+        <h3 class="card__title">Calathea plant</h3>
+        <div class="card__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+        <div class="card__action">
+          <div class="card__price">$ 40</div>
+          <button class="card__atc">
+            <svg width="48" height="40" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="46" height="38" rx="7" stroke="#DBFFEC" stroke-width="2"/>
+              <path d="M19.2 12.6667H28.8C33.3334 12.6667 33.7867 14.7867 34.0934 17.3734L35.2933 27.3734C35.68 30.6534 34.6667 33.3334 30 33.3334H18.0133C13.3333 33.3334 12.32 30.6534 12.72 27.3734L13.92 17.3734C14.2133 14.7867 14.6667 12.6667 19.2 12.6667Z" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.6667 14.6667V10.0001C18.6667 8.00008 20 6.66675 22 6.66675H26C28 6.66675 29.3333 8.00008 29.3333 10.0001V14.6667" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M35.2133 26.7065H18.6667" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>              
+          </button>
+        </div>
+      </div>
+      <div class="card card--rounded-md card--md card--flex-column card--gap-sm">
+        <div class="card__image">
+          <img src="assets/images/flowers/flower.png" alt="Flower">
+<!--           <img src="assets/images/flowers/Plant@2x.png" alt="Flower"> -->
+        </div>
+        <h3 class="card__title">Calathea plant</h3>
+        <div class="card__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+        <div class="card__action">
+          <div class="card__price">$ 40</div>
+          <button class="card__atc">
+            <svg width="48" height="40" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="46" height="38" rx="7" stroke="#DBFFEC" stroke-width="2"/>
+              <path d="M19.2 12.6667H28.8C33.3334 12.6667 33.7867 14.7867 34.0934 17.3734L35.2933 27.3734C35.68 30.6534 34.6667 33.3334 30 33.3334H18.0133C13.3333 33.3334 12.32 30.6534 12.72 27.3734L13.92 17.3734C14.2133 14.7867 14.6667 12.6667 19.2 12.6667Z" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.6667 14.6667V10.0001C18.6667 8.00008 20 6.66675 22 6.66675H26C28 6.66675 29.3333 8.00008 29.3333 10.0001V14.6667" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M35.2133 26.7065H18.6667" stroke="#DBFFEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>              
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="reviews container">
+    <h2 class="section-heading">Customer Review</h2>
+    <div class="reviews__items">
+      <div class="card card--rounded-md card--lg card--flex-column card--gap-lg">
+        <div class="avatar">
+          <img src="https://media.istockphoto.com/id/1919265357/photo/close-up-portrait-of-confident-businessman-standing-in-office.jpg?s=612x612&w=0&k=20&c=ZXRPTG9VMfYM3XDo1UL9DEpfO8iuGVSsyh8dptfKQsQ=" class="avatar__image" alt="Avatar photo">
+          <div class="avatar__info">
+            <div class="avatar__title">Olexandr Ivanovich</div>
+            <div class="avatar__rating">                   
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.15333 2.33977L10.3267 4.68643C10.4867 5.0131 10.9133 5.32643 11.2733 5.38643L13.4 5.73977C14.76 5.96643 15.08 6.9531 14.1 7.92643L12.4467 9.57977C12.1667 9.85977 12.0133 10.3998 12.1 10.7864L12.5733 12.8331C12.9467 14.4531 12.0867 15.0798 10.6533 14.2331L8.66 13.0531C8.3 12.8398 7.70667 12.8398 7.34 13.0531L5.34667 14.2331C3.92 15.0798 3.05333 14.4464 3.42667 12.8331L3.9 10.7864C3.98667 10.3998 3.83333 9.85977 3.55333 9.57977L1.9 7.92643C0.926667 6.9531 1.24 5.96643 2.6 5.73977L4.72667 5.38643C5.08 5.32643 5.50667 5.0131 5.66667 4.68643L6.84 2.33977C7.48 1.06643 8.52 1.06643 9.15333 2.33977Z" fill="#FFFBE6" stroke="#FFFBE6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>    
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.15333 2.33977L10.3267 4.68643C10.4867 5.0131 10.9133 5.32643 11.2733 5.38643L13.4 5.73977C14.76 5.96643 15.08 6.9531 14.1 7.92643L12.4467 9.57977C12.1667 9.85977 12.0133 10.3998 12.1 10.7864L12.5733 12.8331C12.9467 14.4531 12.0867 15.0798 10.6533 14.2331L8.66 13.0531C8.3 12.8398 7.70667 12.8398 7.34 13.0531L5.34667 14.2331C3.92 15.0798 3.05333 14.4464 3.42667 12.8331L3.9 10.7864C3.98667 10.3998 3.83333 9.85977 3.55333 9.57977L1.9 7.92643C0.926667 6.9531 1.24 5.96643 2.6 5.73977L4.72667 5.38643C5.08 5.32643 5.50667 5.0131 5.66667 4.68643L6.84 2.33977C7.48 1.06643 8.52 1.06643 9.15333 2.33977Z" fill="#FFFBE6" stroke="#FFFBE6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg> 
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.15333 2.33977L10.3267 4.68643C10.4867 5.0131 10.9133 5.32643 11.2733 5.38643L13.4 5.73977C14.76 5.96643 15.08 6.9531 14.1 7.92643L12.4467 9.57977C12.1667 9.85977 12.0133 10.3998 12.1 10.7864L12.5733 12.8331C12.9467 14.4531 12.0867 15.0798 10.6533 14.2331L8.66 13.0531C8.3 12.8398 7.70667 12.8398 7.34 13.0531L5.34667 14.2331C3.92 15.0798 3.05333 14.4464 3.42667 12.8331L3.9 10.7864C3.98667 10.3998 3.83333 9.85977 3.55333 9.57977L1.9 7.92643C0.926667 6.9531 1.24 5.96643 2.6 5.73977L4.72667 5.38643C5.08 5.32643 5.50667 5.0131 5.66667 4.68643L6.84 2.33977C7.48 1.06643 8.52 1.06643 9.15333 2.33977Z" fill="#FFFBE6" stroke="#FFFBE6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg> 
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.15333 2.33977L10.3267 4.68643C10.4867 5.0131 10.9133 5.32643 11.2733 5.38643L13.4 5.73977C14.76 5.96643 15.08 6.9531 14.1 7.92643L12.4467 9.57977C12.1667 9.85977 12.0133 10.3998 12.1 10.7864L12.5733 12.8331C12.9467 14.4531 12.0867 15.0798 10.6533 14.2331L8.66 13.0531C8.3 12.8398 7.70667 12.8398 7.34 13.0531L5.34667 14.2331C3.92 15.0798 3.05333 14.4464 3.42667 12.8331L3.9 10.7864C3.98667 10.3998 3.83333 9.85977 3.55333 9.57977L1.9 7.92643C0.926667 6.9531 1.24 5.96643 2.6 5.73977L4.72667 5.38643C5.08 5.32643 5.50667 5.0131 5.66667 4.68643L6.84 2.33977C7.48 1.06643 8.52 1.06643 9.15333 2.33977Z" fill="#FFFBE6" stroke="#FFFBE6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg> 
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.15333 2.33977L10.3267 4.68643C10.4867 5.0131 10.9133 5.32643 11.2733 5.38643L13.4 5.73977C14.76 5.96643 15.08 6.9531 14.1 7.92643L12.4467 9.57977C12.1667 9.85977 12.0133 10.3998 12.1 10.7864L12.5733 12.8331C12.9467 14.4531 12.0867 15.0798 10.6533 14.2331L8.66 13.0531C8.3 12.8398 7.70667 12.8398 7.34 13.0531L5.34667 14.2331C3.92 15.0798 3.05333 14.4464 3.42667 12.8331L3.9 10.7864C3.98667 10.3998 3.83333 9.85977 3.55333 9.57977L1.9 7.92643C0.926667 6.9531 1.24 5.96643 2.6 5.73977L4.72667 5.38643C5.08 5.32643 5.50667 5.0131 5.66667 4.68643L6.84 2.33977C7.48 1.06643 8.52 1.06643 9.15333 2.33977Z" fill="#FFFBE6" stroke="#FFFBE6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>                        
+            </div>
+          </div>
+        </div>
+        <p class="card__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...
+        </p>
+      </div>
+      <div class="card card--rounded-md card--lg card--flex-column card--gap-lg">
+        <div class="avatar">
+          <img src="https://media.istockphoto.com/id/1919265357/photo/close-up-portrait-of-confident-businessman-standing-in-office.jpg?s=612x612&w=0&k=20&c=ZXRPTG9VMfYM3XDo1UL9DEpfO8iuGVSsyh8dptfKQsQ=" class="avatar__image" alt="Avatar photo">
+          <div class="avatar__info">
+            <div class="avatar__title">Olexandr Ivanovich</div>
+            <div class="avatar__rating">                   
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.15333 2.33977L10.3267 4.68643C10.4867 5.0131 10.9133 5.32643 11.2733 5.38643L13.4 5.73977C14.76 5.96643 15.08 6.9531 14.1 7.92643L12.4467 9.57977C12.1667 9.85977 12.0133 10.3998 12.1 10.7864L12.5733 12.8331C12.9467 14.4531 12.0867 15.0798 10.6533 14.2331L8.66 13.0531C8.3 12.8398 7.70667 12.8398 7.34 13.0531L5.34667 14.2331C3.92 15.0798 3.05333 14.4464 3.42667 12.8331L3.9 10.7864C3.98667 10.3998 3.83333 9.85977 3.55333 9.57977L1.9 7.92643C0.926667 6.9531 1.24 5.96643 2.6 5.73977L4.72667 5.38643C5.08 5.32643 5.50667 5.0131 5.66667 4.68643L6.84 2.33977C7.48 1.06643 8.52 1.06643 9.15333 2.33977Z" fill="#FFFBE6" stroke="#FFFBE6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>    
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.15333 2.33977L10.3267 4.68643C10.4867 5.0131 10.9133 5.32643 11.2733 5.38643L13.4 5.73977C14.76 5.96643 15.08 6.9531 14.1 7.92643L12.4467 9.57977C12.1667 9.85977 12.0133 10.3998 12.1 10.7864L12.5733 12.8331C12.9467 14.4531 12.0867 15.0798 10.6533 14.2331L8.66 13.0531C8.3 12.8398 7.70667 12.8398 7.34 13.0531L5.34667 14.2331C3.92 15.0798 3.05333 14.4464 3.42667 12.8331L3.9 10.7864C3.98667 10.3998 3.83333 9.85977 3.55333 9.57977L1.9 7.92643C0.926667 6.9531 1.24 5.96643 2.6 5.73977L4.72667 5.38643C5.08 5.32643 5.50667 5.0131 5.66667 4.68643L6.84 2.33977C7.48 1.06643 8.52 1.06643 9.15333 2.33977Z" fill="#FFFBE6" stroke="#FFFBE6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg> 
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.15333 2.33977L10.3267 4.68643C10.4867 5.0131 10.9133 5.32643 11.2733 5.38643L13.4 5.73977C14.76 5.96643 15.08 6.9531 14.1 7.92643L12.4467 9.57977C12.1667 9.85977 12.0133 10.3998 12.1 10.7864L12.5733 12.8331C12.9467 14.4531 12.0867 15.0798 10.6533 14.2331L8.66 13.0531C8.3 12.8398 7.70667 12.8398 7.34 13.0531L5.34667 14.2331C3.92 15.0798 3.05333 14.4464 3.42667 12.8331L3.9 10.7864C3.98667 10.3998 3.83333 9.85977 3.55333 9.57977L1.9 7.92643C0.926667 6.9531 1.24 5.96643 2.6 5.73977L4.72667 5.38643C5.08 5.32643 5.50667 5.0131 5.66667 4.68643L6.84 2.33977C7.48 1.06643 8.52 1.06643 9.15333 2.33977Z" fill="#FFFBE6" stroke="#FFFBE6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg> 
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.15333 2.33977L10.3267 4.68643C10.4867 5.0131 10.9133 5.32643 11.2733 5.38643L13.4 5.73977C14.76 5.96643 15.08 6.9531 14.1 7.92643L12.4467 9.57977C12.1667 9.85977 12.0133 10.3998 12.1 10.7864L12.5733 12.8331C12.9467 14.4531 12.0867 15.0798 10.6533 14.2331L8.66 13.0531C8.3 12.8398 7.70667 12.8398 7.34 13.0531L5.34667 14.2331C3.92 15.0798 3.05333 14.4464 3.42667 12.8331L3.9 10.7864C3.98667 10.3998 3.83333 9.85977 3.55333 9.57977L1.9 7.92643C0.926667 6.9531 1.24 5.96643 2.6 5.73977L4.72667 5.38643C5.08 5.32643 5.50667 5.0131 5.66667 4.68643L6.84 2.33977C7.48 1.06643 8.52 1.06643 9.15333 2.33977Z" fill="#FFFBE6" stroke="#FFFBE6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg> 
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.15333 2.33977L10.3267 4.68643C10.4867 5.0131 10.9133 5.32643 11.2733 5.38643L13.4 5.73977C14.76 5.96643 15.08 6.9531 14.1 7.92643L12.4467 9.57977C12.1667 9.85977 12.0133 10.3998 12.1 10.7864L12.5733 12.8331C12.9467 14.4531 12.0867 15.0798 10.6533 14.2331L8.66 13.0531C8.3 12.8398 7.70667 12.8398 7.34 13.0531L5.34667 14.2331C3.92 15.0798 3.05333 14.4464 3.42667 12.8331L3.9 10.7864C3.98667 10.3998 3.83333 9.85977 3.55333 9.57977L1.9 7.92643C0.926667 6.9531 1.24 5.96643 2.6 5.73977L4.72667 5.38643C5.08 5.32643 5.50667 5.0131 5.66667 4.68643L6.84 2.33977C7.48 1.06643 8.52 1.06643 9.15333 2.33977Z" fill="#FFFBE6" stroke="#FFFBE6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>                        
+            </div>
+          </div>
+        </div>
+        <p class="card__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...
+        </p>
+      </div>
+    </div>
+  </section>
+  </main>
 </body>
 </html>
