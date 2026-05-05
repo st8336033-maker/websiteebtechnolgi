@@ -4,43 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planto - Breath Natureal</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        /* --- CSS СТИЛІ --- */
         :root {
             --bg-color: #121a14;
             --accent-green: #29b874;
             --text-white: #dbffec;
             --glass-bg: rgba(255, 255, 255, 0.05);
             --glass-border: rgba(219, 255, 236, 0.1);
-            --font-main: 'Inter', sans-serif;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-white);
-            font-family: var(--font-main);
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* Ефект скла (Glassmorphism) */
+        /* Glassmorphism Effect */
         .glass-card {
             background: var(--glass-bg);
             backdrop-filter: blur(15px);
@@ -48,132 +35,61 @@
             border: 1px solid var(--glass-border);
             border-radius: 24px;
             padding: 25px;
-            transition: transform 0.3s ease;
         }
 
-        .glass-card:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Шапка */
+        /* Header */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 0;
+            padding: 20px 0;
             position: absolute;
             width: 100%;
             top: 0;
             z-index: 100;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 700;
-            font-size: 22px;
-        }
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 22px; }
+        nav ul { display: flex; gap: 30px; list-style: none; }
+        nav a { text-decoration: none; color: var(--text-white); font-size: 14px; text-transform: uppercase; }
 
-        nav ul {
-            display: flex;
-            gap: 35px;
-            list-style: none;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-white);
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Секція Hero */
-        .hero {
-            padding: 160px 0 80px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .hero-text-side { max-width: 550px; }
-
-        .hero-title {
-            font-size: 72px;
-            font-weight: 800;
-            color: var(--accent-green);
-            line-height: 1;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            padding: 12px 28px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: 0.3s;
-            text-transform: uppercase;
-            border: none;
-        }
-
+        /* Hero Section */
+        .hero { padding: 150px 0 60px; display: flex; align-items: center; justify-content: space-between; }
+        .hero-title { font-size: 64px; font-weight: 800; color: var(--accent-green); line-height: 1.1; margin-bottom: 20px; }
+        
         .btn-outline {
+            padding: 12px 24px;
             background: transparent;
             border: 1px solid var(--text-white);
             color: var(--text-white);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
         }
 
-        .btn-outline:hover {
-            background: var(--text-white);
-            color: var(--bg-color);
-        }
-
-        /* Секція Trendy Plants (Горизонтальні картки) */
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            margin: 80px 0 50px;
-        }
-
-        .trendy-grid {
-            display: grid;
-            gap: 40px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .card-horizontal {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .card-horizontal img {
-            width: 280px;
-            border-radius: 20px;
-        }
-
-        /* Секція Top Selling (Вертикальні картки) */
+        /* Top Selling Grid */
+        .section-title { text-align: center; font-size: 32px; margin: 60px 0; }
         .top-selling-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
-            margin-top: 100px;
         }
 
         .card-vertical {
-            padding-top: 80px;
+            text-align: center;
             position: relative;
-            text-align: left;
+            margin-top: 60px;
+            padding-top: 80px;
         }
 
-        .plant-popout {
+        /* Фото, що "вилізає" з картки */
+        .plant-img {
             position: absolute;
-            top: -70px;
+            top: -60px;
             left: 50%;
             transform: translateX(-50%);
-            width: 160px;
-            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+            width: 150px;
+            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.5));
         }
 
         .price-row {
@@ -183,20 +99,10 @@
             margin-top: 20px;
         }
 
-        .price { font-size: 22px; font-weight: 700; }
+        .cart-icon { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 10px; padding: 8px; }
 
-        .cart-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid var(--glass-border);
-            padding: 10px;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        /* Адаптивність */
-        @media (max-width: 900px) {
-            .top-selling-grid { grid-template-columns: 1fr 1fr; }
-            .card-horizontal { flex-direction: column; text-align: center; }
+        @media (max-width: 768px) {
+            .top-selling-grid { grid-template-columns: 1fr; }
             .hero { flex-direction: column; text-align: center; }
         }
     </style>
@@ -205,7 +111,7 @@
 
     <header class="container">
         <div class="logo">
-            <img src="images/logos/logo.png" alt="Logo" width="30">
+            <img src="images/logos/main-logo.svg" alt="Logo" width="30">
             <span>Planto.</span>
         </div>
         <nav>
@@ -216,82 +122,62 @@
                 <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
-        <div class="icons">
-            </div>
+        <div style="display: flex; gap: 15px;">
+            <img src="images/icons/search-normal.svg" width="24">
+            <img src="images/icons/shopping-bag.svg" width="24">
+            <img src="images/icons/profile-circle.svg" width="24">
+        </div>
     </header>
 
     <main class="container">
         <section class="hero">
-            <div class="hero-text-side">
+            <div style="max-width: 500px;">
                 <h1 class="hero-title">Breath Natureal</h1>
-                <p style="margin-bottom: 30px; color: #aaa;">Create a green oasis in your home with our premium selection of indoor plants.</p>
-                <div style="display: flex; gap: 20px;">
-                    <button class="btn btn-outline">Explore</button>
-                    <button class="btn" style="color: white; display: flex; align-items: center; gap: 10px;">
-                        <span>▶</span> Live Demo
-                    </button>
-                </div>
+                <p style="margin-bottom: 30px; opacity: 0.8;">Create your own jungle at home with our premium plants.</p>
+                <button class="btn-outline">Explore</button>
             </div>
             
-            <div class="glass-card" style="width: 320px; position: relative;">
-                <img src="images/flowers/hero_plant.png" alt="Main Plant" style="width: 100%; margin-top: -100px;">
+            <div class="glass-card" style="width: 300px; text-align: left;">
+                <img src="images/flowers/flower.png" style="width: 100%; margin-top: -80px;">
                 <h3 style="margin-top: 20px;">Calathea plant</h3>
-                <button class="btn btn-outline" style="width: 100%; margin-top: 15px;">Buy Now</button>
+                <button class="btn-outline" style="width: 100%; margin-top: 15px;">Buy Now</button>
             </div>
         </section>
 
-        <h2 class="section-title">Our Trendy plants</h2>
-        <div class="trendy-grid">
-            <div class="glass-card card-horizontal">
-                <img src="images/flowers/trendy1.png" alt="Plant">
-                <div>
-                    <h3>For Small Decs Ai Plat</h3>
-                    <p style="font-size: 14px; color: #ccc; margin: 10px 0;">Perfect for office desks and small apartments.</p>
-                    <span class="price">$ 40</span><br><br>
-                    <button class="btn btn-outline">Buy Now</button>
-                </div>
-            </div>
-        </div>
-
         <h2 class="section-title">Our Top Selling</h2>
+        
         <div class="top-selling-grid">
-            
             <div class="glass-card card-vertical">
-                <img src="images/flowers/top1.png" class="plant-popout" alt="Plant">
+                <img src="images/flowers/flower.png" class="plant-img" alt="Plant">
                 <h3>Calathea plant</h3>
-                <p style="font-size: 12px; color: #888;">Low maintenance, high style.</p>
+                <p style="font-size: 12px; opacity: 0.6;">Perfect for home decor</p>
                 <div class="price-row">
-                    <span class="price">$ 40</span>
-                    <button class="cart-btn">🛒</button>
+                    <span style="font-weight: 700; font-size: 20px;">$ 40</span>
+                    <img src="images/icons/shopping-bag.svg" class="cart-icon">
                 </div>
             </div>
 
             <div class="glass-card card-vertical">
-                <img src="images/flowers/top2.png" class="plant-popout" alt="Plant">
-                <h3>Calathea plant</h3>
-                <p style="font-size: 12px; color: #888;">Beautiful patterned leaves.</p>
+                <img src="images/flowers/Plant@2x.png" class="plant-img" alt="Plant">
+                <h3>Indoor Fern</h3>
+                <p style="font-size: 12px; opacity: 0.6;">Easy to maintain</p>
                 <div class="price-row">
-                    <span class="price">$ 40</span>
-                    <button class="cart-btn">🛒</button>
+                    <span style="font-weight: 700; font-size: 20px;">$ 45</span>
+                    <img src="images/icons/shopping-bag.svg" class="cart-icon">
                 </div>
             </div>
 
             <div class="glass-card card-vertical">
-                <img src="images/flowers/top3.png" class="plant-popout" alt="Plant">
-                <h3>Cactus plant</h3>
-                <p style="font-size: 12px; color: #888;">Desert vibes for your room.</p>
+                <img src="images/flowers/flower.png" class="plant-img" alt="Plant">
+                <h3>Cactus Mini</h3>
+                <p style="font-size: 12px; opacity: 0.6;">Desert style</p>
                 <div class="price-row">
-                    <span class="price">$ 40</span>
-                    <button class="cart-btn">🛒</button>
+                    <span style="font-weight: 700; font-size: 20px;">$ 25</span>
+                    <img src="images/icons/shopping-bag.svg" class="cart-icon">
                 </div>
             </div>
-
         </div>
     </main>
-
-    <footer style="padding: 100px 0; text-align: center; opacity: 0.5;">
-        <p>© 2026 Planto Project</p>
-    </footer>
 
 </body>
 </html>
