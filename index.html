@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planto - Breath Natureal</title>
+    <title>Planto - Website</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
     <style>
         :root {
             --bg-color: #121a14;
@@ -16,18 +15,10 @@
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-white);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
+        body { background-color: var(--bg-color); color: var(--text-white); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* Glassmorphism Effect */
+        /* Glass Cards */
         .glass-card {
             background: var(--glass-bg);
             backdrop-filter: blur(15px);
@@ -38,73 +29,30 @@
         }
 
         /* Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            position: absolute;
-            width: 100%;
-            top: 0;
-            z-index: 100;
-        }
-
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
         .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 22px; }
         nav ul { display: flex; gap: 30px; list-style: none; }
         nav a { text-decoration: none; color: var(--text-white); font-size: 14px; text-transform: uppercase; }
 
-        /* Hero Section */
-        .hero { padding: 150px 0 60px; display: flex; align-items: center; justify-content: space-between; }
+        /* Sections */
+        .hero { padding: 100px 0 60px; display: flex; align-items: center; justify-content: space-between; }
         .hero-title { font-size: 64px; font-weight: 800; color: var(--accent-green); line-height: 1.1; margin-bottom: 20px; }
         
-        .btn-outline {
-            padding: 12px 24px;
-            background: transparent;
-            border: 1px solid var(--text-white);
-            color: var(--text-white);
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-        }
+        .section-title { text-align: center; font-size: 32px; margin: 80px 0 40px; }
 
-        /* Top Selling Grid */
-        .section-title { text-align: center; font-size: 32px; margin: 60px 0; }
-        .top-selling-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
+        /* Trendy Plants (Horizontal) */
+        .trendy-grid { display: flex; flex-direction: column; gap: 30px; max-width: 850px; margin: 0 auto; }
+        .card-horizontal { display: flex; align-items: center; gap: 30px; }
+        .card-horizontal img { width: 220px; border-radius: 20px; }
 
-        .card-vertical {
-            text-align: center;
-            position: relative;
-            margin-top: 60px;
-            padding-top: 80px;
-        }
+        /* Top Selling (Vertical) */
+        .top-selling-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .card-vertical { text-align: left; position: relative; margin-top: 60px; padding-top: 80px; }
+        .plant-img { position: absolute; top: -70px; left: 50%; transform: translateX(-50%); width: 160px; }
 
-        /* Фото, що "вилізає" з картки */
-        .plant-img {
-            position: absolute;
-            top: -60px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px;
-            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.5));
-        }
-
-        .price-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .cart-icon { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 10px; padding: 8px; }
-
-        @media (max-width: 768px) {
-            .top-selling-grid { grid-template-columns: 1fr; }
-            .hero { flex-direction: column; text-align: center; }
-        }
+        .btn-outline { padding: 10px 20px; border: 1px solid white; background: transparent; color: white; border-radius: 8px; cursor: pointer; }
+        .price-row { display: flex; justify-content: space-between; align-items: center; margin-top: 15px; }
+        .cart-icon { background: rgba(255,255,255,0.1); padding: 8px; border-radius: 10px; width: 35px; }
     </style>
 </head>
 <body>
@@ -123,9 +71,9 @@
             </ul>
         </nav>
         <div style="display: flex; gap: 15px;">
-            <img src="images/icons/search-normal.svg" width="24">
-            <img src="images/icons/shopping-bag.svg" width="24">
-            <img src="images/icons/profile-circle.svg" width="24">
+            <img src="images/icons/search-normal.svg" width="22">
+            <img src="images/icons/shopping-bag.svg" width="22">
+            <img src="images/icons/profile-circle.svg" width="22">
         </div>
     </header>
 
@@ -133,51 +81,56 @@
         <section class="hero">
             <div style="max-width: 500px;">
                 <h1 class="hero-title">Breath Natureal</h1>
-                <p style="margin-bottom: 30px; opacity: 0.8;">Create your own jungle at home with our premium plants.</p>
+                <p style="margin-bottom: 30px;">Create your own jungle at home with our premium plants.</p>
                 <button class="btn-outline">Explore</button>
             </div>
-            
-            <div class="glass-card" style="width: 300px; text-align: left;">
+            <div class="glass-card" style="width: 280px;">
                 <img src="images/flowers/flower.png" style="width: 100%; margin-top: -80px;">
-                <h3 style="margin-top: 20px;">Calathea plant</h3>
-                <button class="btn-outline" style="width: 100%; margin-top: 15px;">Buy Now</button>
+                <h3 style="margin-top: 15px;">Calathea plant</h3>
+                <button class="btn-outline" style="width: 100%; margin-top: 10px;">Buy Now</button>
             </div>
         </section>
 
+        <h2 class="section-title">Our Trendy plants</h2>
+        <div class="trendy-grid">
+            <div class="glass-card card-horizontal">
+                <img src="images/flowers/Plant@2x.png" alt="Plant">
+                <div>
+                    <h3>For Small Decs Ai Plat</h3>
+                    <p style="font-size: 14px; opacity: 0.7; margin: 10px 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p style="font-weight: 700; font-size: 18px;">$ 40</p>
+                    <button class="btn-outline" style="margin-top: 10px;">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
         <h2 class="section-title">Our Top Selling</h2>
-        
         <div class="top-selling-grid">
             <div class="glass-card card-vertical">
-                <img src="images/flowers/flower.png" class="plant-img" alt="Plant">
+                <img src="images/flowers/flower.png" class="plant-img">
                 <h3>Calathea plant</h3>
-                <p style="font-size: 12px; opacity: 0.6;">Perfect for home decor</p>
                 <div class="price-row">
-                    <span style="font-weight: 700; font-size: 20px;">$ 40</span>
+                    <span>$ 40</span>
                     <img src="images/icons/shopping-bag.svg" class="cart-icon">
                 </div>
             </div>
-
             <div class="glass-card card-vertical">
-                <img src="images/flowers/Plant@2x.png" class="plant-img" alt="Plant">
-                <h3>Indoor Fern</h3>
-                <p style="font-size: 12px; opacity: 0.6;">Easy to maintain</p>
+                <img src="images/flowers/Plant@2x.png" class="plant-img">
+                <h3>Calathea plant</h3>
                 <div class="price-row">
-                    <span style="font-weight: 700; font-size: 20px;">$ 45</span>
+                    <span>$ 40</span>
                     <img src="images/icons/shopping-bag.svg" class="cart-icon">
                 </div>
             </div>
-
             <div class="glass-card card-vertical">
-                <img src="images/flowers/flower.png" class="plant-img" alt="Plant">
-                <h3>Cactus Mini</h3>
-                <p style="font-size: 12px; opacity: 0.6;">Desert style</p>
+                <img src="images/flowers/flower.png" class="plant-img">
+                <h3>Calathea plant</h3>
                 <div class="price-row">
-                    <span style="font-weight: 700; font-size: 20px;">$ 25</span>
+                    <span>$ 40</span>
                     <img src="images/icons/shopping-bag.svg" class="cart-icon">
                 </div>
             </div>
         </div>
     </main>
-
 </body>
 </html>
