@@ -25,7 +25,6 @@
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* --- ФОН HERO --- */
         .hero-section-wrapper {
             background-image: linear-gradient(rgba(18, 26, 20, 0.8), rgba(18, 26, 20, 0.8)), 
                               url('images/sections/hero-bg.jpg');
@@ -34,7 +33,6 @@
             min-height: 100vh;
         }
 
-        /* --- ШАПКА ТА ЛОГО --- */
         header {
             display: flex;
             justify-content: space-between;
@@ -47,11 +45,11 @@
             align-items: center;
             gap: 15px;
             font-weight: 800;
-            font-size: 28px; /* Збільшено лого */
+            font-size: 28px; 
         }
 
         .logo img {
-            width: 45px; /* Збільшено іконку лого */
+            width: 45px; 
             height: auto;
         }
 
@@ -63,7 +61,6 @@
         .header-icons img { width: 24px; cursor: pointer; transition: transform 0.2s; }
         .header-icons img:hover { transform: scale(1.2); }
 
-        /* --- КНОПКИ ТА ЕФЕКТИ --- */
         .btn-outline {
             padding: 12px 28px;
             background: transparent;
@@ -72,11 +69,10 @@
             border-radius: 10px;
             cursor: pointer;
             font-weight: 600;
-            transition: all 0.3s ease; /* Плавність */
+            transition: all 0.3s ease; 
             display: inline-block;
         }
 
-        /* Ефект при наведенні */
         .btn-outline:hover {
             background-color: var(--accent-green);
             border-color: var(--accent-green);
@@ -84,7 +80,6 @@
             transform: translateY(-2px);
         }
 
-        /* --- HERO CONTENT --- */
         .hero {
             display: flex;
             align-items: center;
@@ -101,7 +96,6 @@
             text-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
-        /* Glass Cards */
         .glass-card {
             background: var(--glass-bg);
             backdrop-filter: blur(20px);
@@ -124,7 +118,6 @@
             filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
         }
 
-        /* --- СЕКЦІЇ ТОВАРІВ --- */
         .section-title {
             text-align: center;
             font-size: 40px;
@@ -150,7 +143,6 @@
             border-radius: 20px;
         }
 
-        /* TOP SELLING */
         .top-selling-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
