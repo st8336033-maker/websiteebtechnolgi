@@ -31,8 +31,6 @@
             background-position: center;
             min-height: 100vh;
         }
-
-        <canvas id="dotCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;"></canvas>
         
         header {
             display: flex;
@@ -263,65 +261,6 @@
             
             </div>
     </main>
-
-    <script>
-    const canvas = document.getElementById('dotCanvas');
-    const ctx = canvas.getContext('2d');
-    let dots = [];
-    const spacing = 30; // Відстань між точками
-    const mouse = { x: null, y: null, radius: 100 };
-
-    function init() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        dots = [];
-        for (let x = 0; x < canvas.width; x += spacing) {
-            for (let y = 0; y < canvas.height; y += spacing) {
-                dots.push({ x, y, baseX: x, baseY: y });
-            }
-        }
-    }
-
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = '#2F293A'; // Колір точок
-
-        dots.forEach(dot => {
-            const dx = mouse.x - dot.x;
-            const dy = mouse.y - dot.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            
-            if (distance < mouse.radius) {
-                const force = (mouse.radius - distance) / mouse.radius;
-                const directionX = dx / distance;
-                const directionY = dy / distance;
-                dot.x -= directionX * force * 5;
-                dot.y -= directionY * force * 5;
-                ctx.fillStyle = '#5227FF'; // Колір при наведенні
-            } else {
-                // Повернення на місце
-                dot.x += (dot.baseX - dot.x) * 0.1;
-                dot.y += (dot.baseY - dot.y) * 0.1;
-                ctx.fillStyle = '#2F293A';
-            }
-
-            ctx.beginPath();
-            ctx.arc(dot.x, dot.y, 2, 0, Math.PI * 2);
-            ctx.fill();
-        });
-        requestAnimationFrame(animate);
-    }
-
-    window.addEventListener('mousemove', (e) => {
-        mouse.x = e.x;
-        mouse.y = e.y;
-    });
-
-    window.addEventListener('resize', init);
-
-    init();
-    animate();
-</script>
     
 
 </body>
