@@ -1,9 +1,192 @@
 /* 1. LAYER DEFINITION */
-@layer reset, base, layout, components, sections, utilities;
+:root {
+    --bg-color: #121a14;
+    --accent-green: #29b874;
+    --text-white: #dbffec;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(219, 255, 236, 0.1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-white);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+.hero-section-wrapper {
+    background-image: linear-gradient(rgba(18, 26, 20, 0.8), rgba(18, 26, 20, 0.8)), 
+                      url('images/sections/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 800;
+    font-size: 28px; 
+}
+
+.logo img {
+    width: 150px; 
+    height: auto;
+}
+
+nav ul { display: flex; gap: 35px; list-style: none; }
+nav a { text-decoration: none; color: var(--text-white); font-size: 14px; font-weight: 600; transition: 0.3s; }
+nav a:hover { color: var(--accent-green); }
+
+.header-icons { display: flex; gap: 20px; align-items: center; }
+.header-icons img { width: 24px; cursor: pointer; transition: transform 0.2s; }
+.header-icons img:hover { transform: scale(1.2); }
+
+.btn-outline {
+    padding: 12px 28px;
+    background: transparent;
+    border: 1px solid var(--text-white);
+    color: var(--text-white);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease; 
+    display: inline-block;
+}
+
+.btn-outline:hover {
+    background-color: var(--accent-green);
+    border-color: var(--accent-green);
+    box-shadow: 0 0 20px rgba(41, 184, 116, 0.4);
+    transform: translateY(-2px);
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0;
+}
+
+.hero-title {
+    font-size: 72px;
+    font-weight: 800;
+    color: var(--accent-green);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.hero-card {
+    width: 320px;
+    text-align: left;
+    position: relative;
+}
+
+.hero-card img {
+    width: 110%;
+    margin-top: -100px;
+    margin-left: -5%;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+}
+
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    margin: 100px 0 50px;
+    color: var(--text-white);
+}
+
+.trendy-grid {
+    display: grid;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.card-horizontal img {
+    width: 250px;
+    border-radius: 20px;
+}
+
+.top-selling-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 100px;
+}
+
+.card-vertical {
+    margin-top: 80px;
+    padding-top: 100px;
+    position: relative;
+}
+
+.plant-pop {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    transition: 0.4s;
+}
+
+.glass-card:hover .plant-pop {
+    transform: translateX(-50%) translateY(-10px) scale(1.05);
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.cart-btn {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cart-btn:hover { background: var(--accent-green); }
+
+
+/* 1. LAYER DEFINITION */
+/*@layer reset, base, layout, components, sections, utilities;
 
 @layer reset {
     /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-    button,hr,input{overflow:visible}
+   /* button,hr,input{overflow:visible}
     progress,sub,sup{vertical-align:baseline}
     [type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}
     html{line-height:1.15;-webkit-text-size-adjust:100%; text-size-adjust:100%}
@@ -36,7 +219,7 @@
     [hidden],template{display:none}
 
     /* Custom resets*/
-    button {
+    /*button {
       padding: 0;
       margin: 0;
       background: none;
@@ -45,13 +228,13 @@
 }
 
 /* 2. BASE LAYER */
-@layer base {
+/*@layer base {
   :root {
     /* --- Font Families --- */
-    --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+/*    --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
     /* --- Font Weights --- */
-    --font-weight-regular: 400;
+/*    --font-weight-regular: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -59,7 +242,7 @@
     --font-weight-black: 900;
 
     /* --- Font Sizes --- */
-    --font-size-xs: 14px;
+/*    --font-size-xs: 14px;
     --font-size-sm: 16px;
     --font-size-base: 17px;
     --font-size-md: 18px;
@@ -77,7 +260,7 @@
     --font-size-h2: var(--font-size-7xl);
 
     /* --- Colors --- */
-    --color-primary-100: #004B23;
+/*    --color-primary-100: #004B23;
     --color-primary-70:  #49C583;
     --color-primary-20:  #DBFFEC;
     --color-secondary-60: #FFD60A;
@@ -85,14 +268,14 @@
     --color-bg-body: #1B2316;
 
     /* --- Border Radiuses --- */
-    --radius-sm: 20px;
+/*    --radius-sm: 20px;
     --radius-md: 40px;
     --radius-lg: 150px;
     --radius-50: 50%;
     --radius-full: 100%;
 
     /* --- Effects & Shadows --- */
-    --card-bg-glass: color-mix(in srgb, var(--color-primary-20), transparent 84%);
+/*    --card-bg-glass: color-mix(in srgb, var(--color-primary-20), transparent 84%);
     --shadow-inset-soft: inset 4px 4px 6px rgba(0, 0, 0, 0.25);
     --blur-glass: blur(12.5px);
   }
@@ -141,7 +324,7 @@
 }
 
 /* 3. LAYOUT LAYER */
-@layer layout {
+/*@layer layout {
   .container {
     max-width: 1440px;
     margin-inline: auto;
@@ -150,7 +333,7 @@
 } 
 
 /* 3. COMPONENTS LAYER */
-@layer components {
+/*@layer components {
   .btn {
     --radius-btn: var(--radius-md);
     display: inline-flex;
@@ -215,7 +398,7 @@
 }
 
 /* 4. LAYOUT LAYER */
-@layer sections {
+/*@layer sections {
   section {
     display: flex;
     align-items: center;
@@ -226,8 +409,8 @@
   .hero {
     min-height: 100vh;
     /* Виправлено шлях до картинки відповідно до твоїх папок */
-    background: url('images/hero-bg.jpg') no-repeat center/cover;
-    display: grid;
-    place-items: center;
-  }
-}
+/* background: url('images/hero-bg.jpg') no-repeat center/cover;*/
+ /*display: grid;*/
+    /*place-items: center;*/
+/*  }
+/* }*/
